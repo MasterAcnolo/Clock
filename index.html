@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Counter</title>
+</head>
+
+<body>
+
+    <p id="container">
+
+    </p>
+
+
+    <script>
+
+
+
+        var NombreTimestamp = new Date();
+        const timer = setInterval(actualisation, 1000); // mise à jour toutes les secondes
+
+        function actualisation() {
+
+            // console.log("Les millisecondes actuelle sont de " + NombreTimestamp.getMilliseconds());
+            console.log("Les secondes actuelles sont de " + NombreTimestamp.getSeconds())
+
+            document.getElementById("container").innerHTML = NombreTimestamp.getSeconds()
+            clearInterval(timer);
+            actualisation();
+        }
+
+        actualisation(); // premier affichage
+
+
+
+    </script>
+</body>
+
+</html>
