@@ -1,13 +1,11 @@
-:root{
-
-    /* Thème par Défaut*/
-    --text-color : white;
+:root {
+    /* Thème par Défaut */
+    --text-color: white;
     --background-color: #273746;
-
 
     --background-clock-color: #f0f3f4;
     --aiguilles-secondes-color: red;
-    --aiguilles-minutes-color:#666;
+    --aiguilles-minutes-color: #666;
     --aiguilles-heures-color: #333;
     --trait-color: black;
     --border-color: black;
@@ -17,23 +15,28 @@
     --button-border-color: white;
 }
 
-
-html{
+html {
+    height: 100%;
+    margin: 0;
     background: var(--background-color); 
     color: var(--text-color);
-    transition: background-color 0.5s ease, color 0.5s ease; 
-  }
+    transition: background-color 0.5s ease, color 0.5s ease;
 
-.dark-theme{
+    /* Flexbox centré */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    --text-color: #273746; 
+.dark-theme {
+    --text-color: #273746;
     --background-color: #0000003d; 
 
-    --background-clock-color: #313131; 
-    --aiguilles-secondes-color: blue; 
-    --aiguilles-minutes-color: #fffbfb; 
-    --aiguilles-heures-color: #bb1d1d; 
-    --trait-color: #666; 
+    --background-clock-color: #313131;
+    --aiguilles-secondes-color: blue;
+    --aiguilles-minutes-color: #fffbfb;
+    --aiguilles-heures-color: #bb1d1d;
+    --trait-color: #666;
     --border-color: white;
 
     --text-button-color: rgb(0, 0, 0);
@@ -41,20 +44,27 @@ html{
     --button-border-color: rgb(0, 0, 0);
 }
 
-#BoutonMode{ /* Box */ 
-
+#BoutonMode {
+    position: fixed; 
+    top: 85%;  
+    left: 50%;
+    transform: translate(-50%, -50%);  
     
-    border-radius: 3%;
     background-color: var(--button-bg-color);
     border-color: var(--button-border-color);
-}
-
-#textmode{ /* Text Mode */
-
+    border-radius: 3%;
+    padding: 10px 20px; 
     color: var(--text-button-color);
+    font-size: 16px; 
+    transition: transform 0.3s ease; /
 }
 
-#BoutonMode:hover{
-    transform: scale(1.1);
 
+#BoutonMode:hover {
+    transform: translate(-50%, -50%) scale(1.1);  
+    transform-origin: center;  
+}
+
+#textmode {
+    color: var(--text-button-color);
 }
