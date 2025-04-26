@@ -3,7 +3,7 @@
     src: url("digital-7.ttf");
 }
 
-.container {
+.Digital {
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -21,6 +21,6 @@ p {
     margin: 0; 
     font-family: Digital;
     font-size: 250%;
-    color: #f0f3f4;
+    color: var(--text-color);
 }
 

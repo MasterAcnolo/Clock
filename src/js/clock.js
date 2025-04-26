@@ -10,7 +10,7 @@ function call() {
         var Heures = temps.getHours();
         var Minutes = temps.getMinutes();
         var Secondes = temps.getSeconds();
-        var Milliseconds = temps.getMilliseconds();
+        // var Milliseconds = temps.getMilliseconds(); 
 
         const AiguilleSecondes = document.getElementById("AiguilleSecondes");
         const AiguilleMinutes = document.getElementById("AiguilleMinutes");

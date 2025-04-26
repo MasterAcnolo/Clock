@@ -1,3 +1,0 @@
-import temps
-
-print(horloge)

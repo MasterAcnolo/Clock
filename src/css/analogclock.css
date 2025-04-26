@@ -1,13 +1,15 @@
+/* @import url("styles.css"); Inutile car HTML C'est le Goat*/
 
 .Analogique {
   position: relative;
   width: 300px;
   height: 300px;
-  background: #f0f3f4;
+  background: var(--background-clock-color);
   border-radius: 50%;
   margin: 50px auto;
-  border: 5px solid black;
+  border: 5px solid var(--border-color);
 }
+
 
 
 .aiguille {
@@ -21,7 +23,7 @@
 .secondes {
   width: 2px;
   height: 45%;
-  background: red;
+  background: var(--aiguilles-secondes-color);
   transition: transform 0.1s linear; 
 }
 
@@ -29,7 +31,7 @@
 .minutes {
   width: 4px;
   height: 40%;
-  background: #666;
+  background: var(--aiguilles-minutes-color);
   transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
@@ -37,7 +39,7 @@
 .heures {
   width: 6px;
   height: 30%;
-  background: #333;
+  background: var(--aiguilles-heures-color);
   transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
@@ -49,7 +51,7 @@
   width: 12px;
   height: 12px;
   background: white;
-  border: 2px solid #1b1b1b;
+  border: 2px solid var(--border-color);
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
@@ -63,11 +65,8 @@
   position: absolute;
   width: 2px;
   height: 15px; 
-  background: black;
+  background: var(--trait-color); /*  --trait-color: black; */
   top: 8%;
   left: 50%;
-  
   transform-origin: center 940%;
-  
-  
 }
