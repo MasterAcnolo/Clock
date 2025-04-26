@@ -13,6 +13,8 @@
     --text-button-color: rgb(255, 255, 255);
     --button-bg-color: #334a5f;
     --button-border-color: white;
+
+    --dot-color: rgb(53, 53, 53);
 }
 
 html {
@@ -42,6 +44,8 @@ html {
     --text-button-color: rgb(0, 0, 0);
     --button-bg-color: #717274;
     --button-border-color: rgb(0, 0, 0);
+
+    --dot-color: rgb(255, 255, 255);
 }
 
 #BoutonMode {
