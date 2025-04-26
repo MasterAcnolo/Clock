@@ -4,67 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earth Counter</title>
+    <title>Clock</title>
+
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/clock.css">
+
+    <script src="script.js"></script>
 </head>
 
 <body>
 
-    <p id="container">
+    <p class="container">
         <p id="Secondes"></p>
         <p id="Minutes"></p>
         <p id="Heures"></p>
         <p id="Jour"></p>
         <p id="Mois"></p>
+        <p id="Année"></p>
     </p>
 
-
-    <script>
-
-        function call(){
-            
-            clock(); // Appel Initial
-            
-            function clock(){
-                var temps = new Date();
-
-                var Annee = temps.getFullYear();
-                var Mois = temps.getMonth();
-                var Jour = temps.getDate();
-                var Heures = temps.getHours();
-                var Minutes = temps.getMinutes();
-                var Secondes = temps.getSeconds();
-                var Milliseconds = temps.getMilliseconds();
+    <div class="Analogique">
+        <div id="Secondes"></div>
+    </div>
 
 
-                if( Heures < 10 ){ Heures = '0' + Heures; }
-                if( Minutes < 10 ){ Minutes = '0' + Minutes; } // Ca Ajoute un 0 si N < 10
-                if( Secondes < 10 ){ Secondes = '0' + Secondes; }
 
-                // console.log(Secondes) // Utile pour débuguer
-                
-                document.getElementById("Secondes").innerHTML= Secondes
-                document.getElementById("Minutes").innerHTML= Minutes
-                document.getElementById("Heures").innerHTML= Heures
-                document.getElementById("Jour").innerHTML= Jour
-                
-                // document.getElementById("Mois").innerHTML= Mois + 1
-                Month = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"]
-                document.getElementById("Mois").innerHTML= Month[Mois]
-
-                
-            }
-            setInterval(clock,1000); // Delay de 1000 ms de refresh
-        }
-        
-
-
-    </script>
-
-    <style>
-        *{
-            background-color: gray; /* Pour les Neuilles */
-        }
-    </style>
 </body>
 
 </html>
