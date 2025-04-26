@@ -1,0 +1,55 @@
+
+.Analogique {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #eee;
+  border-radius: 50%;
+  margin: 50px auto;
+  border: 5px solid black;
+}
+
+
+.aiguille {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(0deg);
+}
+
+.secondes {
+  width: 2px;
+  height: 45%;
+  background: red;
+  transition: transform 0.1s linear; 
+}
+
+
+.minutes {
+  width: 4px;
+  height: 40%;
+  background: #666;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+
+.heures {
+  width: 6px;
+  height: 30%;
+  background: #333;
+  transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid #1b1b1b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

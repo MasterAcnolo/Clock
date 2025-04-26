@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    
+  }
+  
+.time, .date {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+}
+  
+p {
+    margin: 0; 
+}

@@ -7,27 +7,36 @@
     <title>Clock</title>
 
     <link rel="stylesheet" href="src/styles.css">
-    <link rel="stylesheet" href="src/clock.css">
+    <link rel="stylesheet" href="src/analogclock.css">
+    <link rel="stylesheet" href="src/digitalclock.css">
 
     <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="call()"> <!-- Lance Automatiquement la fonction de l'horloge -->
 
-    <p class="container">
-        <p id="Secondes"></p>
-        <p id="Minutes"></p>
-        <p id="Heures"></p>
-        <p id="Jour"></p>
-        <p id="Mois"></p>
-        <p id="Année"></p>
-    </p>
-
+   
     <div class="Analogique">
-        <div id="Secondes"></div>
+        
+        <div id="AiguilleSecondes" class="aiguille secondes"></div>
+        <div id="AiguilleMinutes" class="aiguille minutes"></div>
+        <div id="AiguilleHeures" class="aiguille heures"></div>
+        <div class="dot"></div>
     </div>
 
-
+    <div class="container">
+        <div class="time">
+          <p id="HeuresTexte">Heures</p>
+          <p id="MinutesTexte">Minutes</p>
+          <p id="SecondesTexte">Secondes</p>
+        </div>
+        <div class="date">
+          <p id="Jour">Jour</p>
+          <p id="Mois">Mois</p>
+          <p id="Annee">Année</p>
+        </div>
+      </div>
+    
 
 </body>
 
