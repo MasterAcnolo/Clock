@@ -51,7 +51,7 @@
   left: 50%;
   width: 12px;
   height: 12px;
-  background: var(--dot-color);
+  background: white;
   border: 2px solid var(--border-color);
   border-radius: 50%;
   transform: translate(-50%, -50%);
