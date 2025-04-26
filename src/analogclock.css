@@ -3,7 +3,7 @@
   position: relative;
   width: 300px;
   height: 300px;
-  background: #eee;
+  background: #f0f3f4;
   border-radius: 50%;
   margin: 50px auto;
   border: 5px solid black;
@@ -52,4 +52,22 @@
   border: 2px solid #1b1b1b;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.container-trait{
+  display: flex;
+  
+}
+.trait {
+  position: absolute;
+  width: 2px;
+  height: 15px; 
+  background: black;
+  top: 8%;
+  left: 50%;
+  
+  transform-origin: center 940%;
+  
+  
 }
