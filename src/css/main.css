@@ -15,6 +15,8 @@
     --button-border-color: white;
 
     --dot-color: rgb(53, 53, 53);
+
+    --bg-chichi: url('../img/Chirac.jpg');
 }
 
 html {
@@ -46,7 +48,11 @@ html {
     --button-border-color: rgb(0, 0, 0);
 
     --dot-color: rgb(255, 255, 255);
+
+    --bg-chichi: url('../img/CharlieChaplin.jpg');
 }
+
+
 
 #BoutonMode {
     position: fixed; 

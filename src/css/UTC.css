@@ -1,0 +1,31 @@
+
+
+#menuFuseaux {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* <-- PAS left ou quoi, c'est right pour droite */
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    text-align: center;
+    z-index: 1000; /* <-- on met au-dessus du reste */
+}
+
+
+#menuFuseaux h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+#selectFuseau {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}

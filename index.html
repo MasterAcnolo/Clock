@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
 
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/digitalclock.css">
     <link rel="stylesheet" href="src/css/analogclock.css">
+    <link rel="stylesheet" href="src/css/UTC.css">
 
     <script src="src/js/clock.js"></script>
     
@@ -72,7 +73,22 @@
       <p id="textmode"> Mode Clair</p>
     </button>
 
+
+    <!-- Différents Fuseaux Horaires indiqués dans un Tableau ( Et pk pas combiner avec la BDD Des villes en liant villes et UTC) -->
+    <!-- <div class="container">
+
+      <h3>Fuseau horaire</h3>
+      <select id="selectFuseau">
+          <option value="UTC">UTC</option>
+          <option value="Europe/Paris">Paris</option>
+          <option value="America/New_York">New York</option>
+          <option value="Asia/Tokyo">Tokyo</option>
+        
+      </select> -->
+
+    </div>
     <script src="src/js/mode.js"></script>
+    <script src="src/js/utc.js"></script>
 </body>
 
 </html>
