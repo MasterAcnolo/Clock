@@ -4,9 +4,7 @@
 }
 
 .Digital {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    position: relative;
     gap: 10px; 
     
   }

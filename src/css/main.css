@@ -41,40 +41,59 @@
     --bg-chichi: url('../img/CharlieChaplin.jpg');
 }
 
-html {
-    height: 100%;
+body {
+    height: 100vh;
     margin: 0;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    gap: 50px; 
+
     background: var(--background-color); 
     color: var(--text-color);
     transition: background-color 0.5s ease, color 0.5s ease;
+}
 
-    /* Flexbox centré */
+.wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Les panels s'alignent au début */
+    align-items: center;         /* Centrer verticalement les panels */
+    gap: 50px;                   /* Espace entre les panels */
+}
+
+.leftpanel {
+    display: flex;
+    flex-direction: column; 
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rightpanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 #BoutonMode {
-    
-    position: absolute; 
-    top: 90%;  
-    left: 50%;
-    transform: translate(-50%, -50%);  
-    
     background-color: var(--button-bg-color);
     border-color: var(--button-border-color);
-    border-radius: 3%;
-    padding: 10px 20px; 
+    border-radius: 8px;
+    padding: 10px 20px;
     color: var(--text-button-color);
-    font-size: 16px; 
-    transition: transform 0.3s ease; /
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 
+/* 
 #BoutonMode:hover {
     transform: translate(-50%, -50%) scale(1.1);  
     transform-origin: center;  
-}
+} */
 
 #textmode {
     color: var(--text-button-color);
