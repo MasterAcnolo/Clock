@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@447&display=swap');
 
 
 #menuFuseaux {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    
     right: 20px; /* <-- PAS left ou quoi, c'est right pour droite */
     transform: translateY(-50%);
     width: 200px;
@@ -12,13 +13,22 @@
     color: white;
     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
     text-align: center;
-    z-index: 1000; /* <-- on met au-dessus du reste */
+    z-index: 1000; 
 }
 
 
-#menuFuseaux h3 {
+#FuseauText{
     margin-top: 0;
     font-size: 18px;
+    color:yellow;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 447;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    
 }
 
 #selectFuseau {
