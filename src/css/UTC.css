@@ -2,9 +2,9 @@
 
 
 #menuFuseaux {
-    position: absolute;
+    position: fixed;
     
-    right: 20px; /* <-- PAS left ou quoi, c'est right pour droite */
+    right: 20px;
     transform: translateY(-50%);
     width: 200px;
     background-color: rgba(0, 0, 0, 0.6);
