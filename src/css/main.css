@@ -40,41 +40,37 @@
 
     --bg-chichi: url('../img/CharlieChaplin.jpg');
 }
-
 body {
     height: 100vh;
     margin: 0;
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;     /* Centre verticalement */
-    gap: 50px; 
-
+    display: grid;
+    grid-template-columns: 1fr auto; /* espace à gauche pour centrer */
+    grid-template-areas: "left right";
+    place-items: center;
     background: var(--background-color); 
     color: var(--text-color);
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.wrapper {
-    display: flex;
-    justify-content: flex-start; /* Les panels s'alignent au début */
-    align-items: center;         /* Centrer verticalement les panels */
-    gap: 50px;                   /* Espace entre les panels */
-}
-
 .leftpanel {
+    grid-area: left;
+    justify-self: center;
+    align-self: center;
     display: flex;
     flex-direction: column; 
     align-items: center;
-    justify-content: center;
     gap: 20px;
 }
 
 .rightpanel {
+    grid-area: right;
+    justify-self: end;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 20px;
+    margin-top: 10%;
 }
 
 #BoutonMode {
@@ -98,3 +94,5 @@ body {
 #textmode {
     color: var(--text-button-color);
 }
+
+
