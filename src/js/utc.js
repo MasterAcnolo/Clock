@@ -1,4 +1,4 @@
-var timezone = "Europe/Paris"; //Défaut
+var timezone = "Europe/Paris"; // Défaut
 var intervalId;
 
 function updateClockUTC() {
@@ -22,7 +22,11 @@ function updateClockUTC() {
         now = new Date();
     }
 
-    call(); // Appelle la fonction de clock.js
+    if (typeof call === "function") {
+        call(); // Appelle la fonction de clock.js si disponible
+    } else {
+        console.warn("La fonction call() n'est pas encore définie.");
+    }
 }
 
 function startClock() {
@@ -31,9 +35,18 @@ function startClock() {
     intervalId = setInterval(updateClockUTC, 1000);
 }
 
-document.getElementById("selectFuseau").addEventListener("change", function() {
-    timezone = this.value;
+// Sécurité DOM : n'ajoute l'event listener que si l'élément existe
+window.addEventListener("DOMContentLoaded", () => {
+    const select = document.getElementsByClassName("selectFuseau")[0]; // On accède au premier élément de la collection
+    if (select) {
+        select.addEventListener("change", function () {
+            timezone = this.value; // Mise à jour du fuseau
+            startClock();           // Relance l'horloge avec le nouveau fuseau
+        });
+    } else {
+        console.warn(".selectFuseau introuvable dans le DOM.");
+    }
+
+    // Démarre l'horloge dès que le DOM est prêt
     startClock();
 });
-
-startClock(); // Lance l'horloge immédiatement au chargement

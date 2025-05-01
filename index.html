@@ -7,16 +7,13 @@
     <title>Clock</title>
 
     <link rel="stylesheet" href="src/css/loader.css">
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/digitalclock.css">
-    <link rel="stylesheet" href="src/css/analogclock.css">
-    <link rel="stylesheet" href="src/css/UTC.css">
+    <script src="src/js/loader.js"></script>
 
 </head>
 
 <body> 
 
-  <script src="src/js/loader.js"></script>
+  
   <div id="loader" class="loading-screen">
     <div class="loader"></div>
     <p>Chargement...</p>
@@ -86,7 +83,7 @@
   
     <div class="rightpanel">
   
-      <select id="selectFuseau">
+      <select class="selectFuseau">
         <option> Choisissez un Fuseau Horaire (UTC+1 par Défaut)</option>
         <option value="Etc/GMT+12">Baker Island UTC-12</option>
         <option value="Pacific/Pago_Pago">Pago Pago UTC-11</option>
@@ -126,15 +123,6 @@
   </div>
   
     
-    <script src="src/js/mode.js"></script>
-    <script src="src/js/clock.js"></script>
-    <script src="src/js/utc.js"></script>
-    <script>
-    
-      call();
-      startClock();
-
-    </script>
 </body>
 
 </html>

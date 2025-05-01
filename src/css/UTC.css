@@ -1,9 +1,9 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@447&display=swap');
 
 
 #menuFuseaux {
     position: fixed;
-    
     right: 20px;
     transform: translateY(-50%);
     width: 200px;
@@ -28,14 +28,35 @@
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-    
 }
 
-#selectFuseau {
-    margin-top: 10px;
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-}
+.selectFuseau {
+    
+    appearance: none;
+    border: 0;
+    outline: 0;
+    
+    width: 20rem;
+    padding: 1rem 4rem 1rem 1rem;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+      linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+    
+    &::-ms-expand {
+      display: none;
+    }
+   
+    &:focus {
+      outline: none;
+    }
+    
+    option {
+      color: inherit;
+      background-color: var(--option-bg);
+    }
+  }
+  
