@@ -7,7 +7,7 @@
     <title>Clock</title>
 
     <link rel="stylesheet" href="src/css/loader.css">
-    <script src="src/js/loader.js"></script>
+    
 
 </head>
 
@@ -83,8 +83,8 @@
   
     <div class="rightpanel">
   
-      <select class="selectFuseau">
-        <option> Choisissez un Fuseau Horaire (UTC+1 par Défaut)</option>
+      <select id="selectFuseau">
+        <option value="Europe/Paris"> Choisissez un Fuseau Horaire (UTC+1 par Défaut)</option>
         <option value="Etc/GMT+12">Baker Island UTC-12</option>
         <option value="Pacific/Pago_Pago">Pago Pago UTC-11</option>
         <option value="Pacific/Honolulu">Honolulu UTC-10</option>
@@ -122,7 +122,7 @@
 
   </div>
   
-    
+  <script src="src/js/loader.js"></script>
 </body>
 
 </html>

@@ -30,7 +30,7 @@
         "wdth" 100;
 }
 
-.selectFuseau {
+#selectFuseau {
     
     appearance: none;
     border: 0;
