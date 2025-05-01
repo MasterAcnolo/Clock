@@ -41,6 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (select) {
         select.addEventListener("change", function () {
+            console.log("Event ")
             timezone = this.value;
             console.log("Fuseau sélectionné :", timezone); // Debug
             startClock(); // relancer la clock avec le bon fuseau
