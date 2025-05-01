@@ -16,66 +16,46 @@
 
     --dot-color: rgb(53, 53, 53);
 
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: #273746;
+    --select-bg: rgba(255, 255, 255, 0.2);
+
     --bg-chichi: url('../img/Chirac.jpg');
 }
 
 
-
-.dark-theme {
-    --text-color: #273746;
-    --background-color: #0000003d; 
-
-    --background-clock-color: #313131;
-    --aiguilles-secondes-color: blue;
-    --aiguilles-minutes-color: #fffbfb;
-    --aiguilles-heures-color: #bb1d1d;
-    --trait-color: #666;
-    --border-color: white;
-
-    --text-button-color: rgb(0, 0, 0);
-    --button-bg-color: #717274;
-    --button-border-color: rgb(0, 0, 0);
-
-    --dot-color: rgb(255, 255, 255);
-
-    --bg-chichi: url('../img/CharlieChaplin.jpg');
-}
-
-html {
-    height: 100%;
+body {
+    height: 100vh;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr auto; /* espace à gauche pour centrer */
+    grid-template-areas: "left right";
+    place-items: center;
     background: var(--background-color); 
     color: var(--text-color);
     transition: background-color 0.5s ease, color 0.5s ease;
+}
 
-    /* Flexbox centré */
+.leftpanel {
+    grid-area: left;
+    justify-self: center;
+    align-self: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
+    gap: 20px;
 }
 
-#BoutonMode {
-    
-    position: absolute; 
-    top: 90%;  
-    left: 50%;
-    transform: translate(-50%, -50%);  
-    
-    background-color: var(--button-bg-color);
-    border-color: var(--button-border-color);
-    border-radius: 3%;
-    padding: 10px 20px; 
-    color: var(--text-button-color);
-    font-size: 16px; 
-    transition: transform 0.3s ease; /
+.rightpanel {
+    grid-area: right;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10%;
 }
 
 
-#BoutonMode:hover {
-    transform: translate(-50%, -50%) scale(1.1);  
-    transform-origin: center;  
-}
-
-#textmode {
-    color: var(--text-button-color);
-}

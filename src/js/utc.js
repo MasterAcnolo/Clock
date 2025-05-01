@@ -1,4 +1,4 @@
-var timezone = "Europe/Paris"; //Défaut
+var timezone = "Europe/Paris"; // Défaut
 var intervalId;
 
 function updateClockUTC() {
@@ -22,7 +22,11 @@ function updateClockUTC() {
         now = new Date();
     }
 
-    call(); // Appelle la fonction de clock.js
+    if (typeof call === "function") {
+        call(); // Appelle la fonction de clock.js si disponible
+    } else {
+        console.warn("La fonction call() n'est pas encore définie.");
+    }
 }
 
 function startClock() {
@@ -31,9 +35,21 @@ function startClock() {
     intervalId = setInterval(updateClockUTC, 1000);
 }
 
-document.getElementById("selectFuseau").addEventListener("change", function() {
-    timezone = this.value;
-    startClock();
-});
 
-startClock(); // Lance l'horloge immédiatement au chargement
+(function () {
+    const select = document.getElementById("selectFuseau");
+  
+    if (select) {
+      console.log("✅ Select trouvé (après chargement)");
+      select.addEventListener("change", function () {
+        console.log("🔥 Changement détecté :", this.value);
+        timezone = this.value;
+        startClock();
+      });
+    } else {
+      console.warn("❌ Select introuvable dans le DOM.");
+    }
+  
+    startClock();
+  })();
+  

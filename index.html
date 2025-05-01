@@ -6,133 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
 
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/digitalclock.css">
-    <link rel="stylesheet" href="src/css/analogclock.css">
-    <link rel="stylesheet" href="src/css/UTC.css">
+    <link rel="stylesheet" href="src/css/loader.css">
+    
 
 </head>
 
-<body > <!-- Lance Automatiquement la fonction de l'horloge -->
-
-  <div class="leftpanel">
-
-    <!-- <h3 id="FuseauText">Fuseau horaire</h3> -->
-    <select id="selectFuseau">
-          <option> Choisissez un Fuseau Horaire (UTC+1 par Défaut)</option>
-          <option value="Etc/GMT+12">Baker Island UTC-12</option>
-          <option value="Pacific/Pago_Pago">Pago Pago UTC-11</option>
-          <option value="Pacific/Honolulu">Honolulu UTC-10</option>
-          <option value="America/Anchorage">Anchorage UTC-9</option>
-          <option value="America/Los_Angeles">Los Angeles UTC-8</option>
-          <option value="America/Denver">Denver UTC-7</option>
-          <option value="America/Chicago">Chicago UTC-6</option>
-          <option value="America/New_York">New York UTC-5</option>
-          <option value="America/Caracas">Caracas UTC-4</option>
-          <option value="America/Argentina/Buenos_Aires">Buenos Aires UTC-3</option>
-          <option value="America/Noronha">Fernando de Noronha UTC-2</option>
-          <option value="Atlantic/Azores">Ponta Delgada UTC-1</option>
-          <option value="Europe/London">London UTC+0</option>
-          <option value="Europe/Paris">Paris UTC+1 (Default)</option>
-          <option value="Europe/Athens">Athènes UTC+2</option>
-          <option value="Europe/Moscow">Moscou UTC+3</option>
-          <option value="Asia/Tehran">Tehran UTC+3:30</option>
-          <option value="Asia/Dubai">Dubai UTC+4</option>
-          <option value="Asia/Kabul">Kabul UTC+4:30</option>
-          <option value="Asia/Karachi">Karachi UTC+5</option>
-          <option value="Asia/Kolkata">Kolkata UTC+5:30</option>
-          <option value="Asia/Almaty">Almaty UTC+6</option>
-          <option value="Asia/Bangkok">Bangkok UTC+7</option>
-          <option value="Asia/Shanghai">Shanghai UTC+8</option>
-          <option value="Asia/Tokyo">Tokyo UTC+9</option>
-          <option value="Australia/Sydney">Sydney UTC+10</option>
-          <option value="Pacific/Honiara">Honiara UTC+11</option>
-          <option value="Pacific/Auckland">Auckland UTC+12</option>
-          <option value="Pacific/Tongatapu">Tongatapu UTC+13</option>
-          <option value="Pacific/Kiritimati">Kiritimati UTC+14</option>
-
-          
-    </select>
+<body> 
 
   
-    <!-- <option value="UTC">Londres UTC+0</option>
-        <option value="Europe/Paris">Paris UTC +1</option>
-        <option value="America/New_York">Washington UTC-4</option>
-        <option value="Asia/Tokyo">Tokyo UTC+9</option>
-        
-        <option value="Etc/GMT+12">Baker Island UTC-12</option> -->
+  <div id="loader" class="loading-screen">
+    <div class="loader"></div>
+    <p>Chargement...</p>
+  </div>
 
-    <div class="Analogique">
-        
-        <div id="AiguilleSecondes" class="aiguille secondes"></div>
-        <div id="AiguilleMinutes" class="aiguille minutes"></div>   
-        <div id="AiguilleHeures" class="aiguille heures"></div>
-        <div class="dot"></div>
 
-        <!-- Traits des heures -->
+  <div class="wrapper">
 
-        <div class="container-trait">
+    <div class="leftpanel">
 
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(0deg);"></div> <!-- 0 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(30deg);"></div> <!-- 5 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(60deg);"></div> <!-- 10 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(90deg);"></div> <!-- 15 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(120deg);"></div> <!-- 20 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(150deg);"></div> <!-- 25 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(180deg);"></div> <!-- 30 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(210deg);"></div> <!-- 35 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(240deg);"></div> <!-- 40 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(270deg);"></div> <!-- 45 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(300deg);"></div> <!-- 50 min -->
-          <div class="trait" style="transform: translate(-50%, -100%) rotate(330deg);"></div> <!-- 55 min -->
-
+      <div class="Analogique">
+          
+          <div id="AiguilleSecondes" class="aiguille secondes"></div>
+          <div id="AiguilleMinutes" class="aiguille minutes"></div>   
+          <div id="AiguilleHeures" class="aiguille heures"></div>
+          <div class="dot"></div>
+  
+          <!-- Traits des heures -->
+  
+          <div class="container-trait">
+  
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(0deg);"></div> <!-- 0 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(30deg);"></div> <!-- 5 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(60deg);"></div> <!-- 10 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(90deg);"></div> <!-- 15 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(120deg);"></div> <!-- 20 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(150deg);"></div> <!-- 25 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(180deg);"></div> <!-- 30 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(210deg);"></div> <!-- 35 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(240deg);"></div> <!-- 40 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(270deg);"></div> <!-- 45 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(300deg);"></div> <!-- 50 min -->
+            <div class="trait" style="transform: translate(-50%, -100%) rotate(330deg);"></div> <!-- 55 min -->
+  
+          </div>
+      
+      </div>
+  
+      <div class="Digital">
+          <div class="time">
+  
+            <p id="HeuresTexte">Heures</p>
+  
+               <p>:</p>
+  
+            <p id="MinutesTexte">Minutes</p>
+  
+                <p>:</p>
+  
+            <p id="SecondesTexte">Secondes</p>
+  
+          </div>
+  
+          <div class="date">
+            <p id="Jour">Jour</p>
+            <p id="Mois">Mois</p>
+            <p id="Annee">Année</p>
+          </div>
         </div>
+      
+      
+      <button id="BoutonMode">
+        <p id="textmode"> Mode Clair</p>
+      </button>
     
     </div>
-
-    <div class="Digital">
-        <div class="time">
-
-          <p id="HeuresTexte">Heures</p>
-
-             <p>:</p>
-
-          <p id="MinutesTexte">Minutes</p>
-
-              <p>:</p>
-
-          <p id="SecondesTexte">Secondes</p>
-
-        </div>
-
-        <div class="date">
-          <p id="Jour">Jour</p>
-          <p id="Mois">Mois</p>
-          <p id="Annee">Année</p>
-        </div>
-      </div>
-    
-    
-    <button id="BoutonMode">
-      <p id="textmode"> Mode Clair</p>
-    </button>
   
+    <div class="rightpanel">
+  
+      <select id="selectFuseau">
+        <option value="Europe/Paris"> Choisissez un Fuseau Horaire (UTC+1 par Défaut)</option>
+        <option value="Etc/GMT+12">Baker Island UTC-12</option>
+        <option value="Pacific/Pago_Pago">Pago Pago UTC-11</option>
+        <option value="Pacific/Honolulu">Honolulu UTC-10</option>
+        <option value="America/Anchorage">Anchorage UTC-9</option>
+        <option value="America/Los_Angeles">Los Angeles UTC-8</option>
+        <option value="America/Denver">Denver UTC-7</option>
+        <option value="America/Chicago">Chicago UTC-6</option>
+        <option value="America/New_York">New York UTC-5</option>
+        <option value="America/Caracas">Caracas UTC-4</option>
+        <option value="America/Argentina/Buenos_Aires">Buenos Aires UTC-3</option>
+        <option value="America/Noronha">Fernando de Noronha UTC-2</option>
+        <option value="Atlantic/Azores">Ponta Delgada UTC-1</option>
+        <option value="Europe/London">London UTC+0</option>
+        <option value="Europe/Paris">Paris UTC+1 (Default)</option>
+        <option value="Europe/Athens">Athènes UTC+2</option>
+        <option value="Europe/Moscow">Moscou UTC+3</option>
+        <option value="Asia/Tehran">Tehran UTC+3:30</option>
+        <option value="Asia/Dubai">Dubai UTC+4</option>
+        <option value="Asia/Kabul">Kabul UTC+4:30</option>
+        <option value="Asia/Karachi">Karachi UTC+5</option>
+        <option value="Asia/Kolkata">Kolkata UTC+5:30</option>
+        <option value="Asia/Almaty">Almaty UTC+6</option>
+        <option value="Asia/Bangkok">Bangkok UTC+7</option>
+        <option value="Asia/Shanghai">Shanghai UTC+8</option>
+        <option value="Asia/Tokyo">Tokyo UTC+9</option>
+        <option value="Australia/Sydney">Sydney UTC+10</option>
+        <option value="Pacific/Honiara">Honiara UTC+11</option>
+        <option value="Pacific/Auckland">Auckland UTC+12</option>
+        <option value="Pacific/Tongatapu">Tongatapu UTC+13</option>
+        <option value="Pacific/Kiritimati">Kiritimati UTC+14</option>
+  
+        
+      </select>
+    </div>
+
   </div>
-
-  <div class="rightpanel">
-
-
-  </div>
-    
-    <script src="src/js/mode.js"></script>
-    <script src="src/js/clock.js"></script>
-    <script src="src/js/utc.js"></script>
-    <script>
-    
-      call();
-      startClock();
-
-    </script>
+  
+  <script src="src/js/loader.js"></script>
 </body>
 
 </html>
