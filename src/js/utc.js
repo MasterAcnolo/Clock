@@ -35,20 +35,21 @@ function startClock() {
     intervalId = setInterval(updateClockUTC, 1000);
 }
 
-// Sécurité DOM : n'ajoute l'event listener que si l'élément existe
-window.addEventListener("DOMContentLoaded", () => {
-    const select = document.getElementById("selectFuseau"); // on prend le 1er élément
 
+(function () {
+    const select = document.getElementById("selectFuseau");
+  
     if (select) {
-        select.addEventListener("change", function () {
-            console.log("Event ")
-            timezone = this.value;
-            console.log("Fuseau sélectionné :", timezone); // Debug
-            startClock(); // relancer la clock avec le bon fuseau
-        });
+      console.log("✅ Select trouvé (après chargement)");
+      select.addEventListener("change", function () {
+        console.log("🔥 Changement détecté :", this.value);
+        timezone = this.value;
+        startClock();
+      });
     } else {
-        console.warn(".selectFuseau introuvable dans le DOM.");
+      console.warn("❌ Select introuvable dans le DOM.");
     }
-
-    startClock(); // Lancer la clock dès le départ
-});
+  
+    startClock();
+  })();
+  
