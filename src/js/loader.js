@@ -8,11 +8,12 @@ window.addEventListener("load", () => {
   ];
 
   const cssToLoad = [
-    "src/css/main.css",
-    "src/css/digitalclock.css",
-    "src/css/analogclock.css",
-    "src/css/theme.css",
-    "src/css/UTC.css"
+    "styles/css/main.css",
+    "styles/css/digitalclock.css",
+    "styles/css/analogclock.css",
+    "styles/css/theme.css",
+    "styles/css/UTC.css",
+    "styles/css/loader.css"
     
   ];
 
