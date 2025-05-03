@@ -24,11 +24,7 @@
     margin-bottom: 20px;
   }
   
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+ 
   
   /* classe cachée après chargement */
   .loading-screen.hidden {

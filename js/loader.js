@@ -1,30 +1,28 @@
 window.addEventListener("load", () => {
-  
+
   const scriptsToLoad = [
-    "src/js/clock.js",
-    "src/js/utc.js",
-    "src/js/mode.js",
-    
+    "js/clock.js",
+    "js/utc.js",
+    "js/mode.js",
   ];
 
   const cssToLoad = [
-    "styles/css/main.css",
-    "styles/css/digitalclock.css",
-    "styles/css/analogclock.css",
-    "styles/css/theme.css",
-    "styles/css/UTC.css",
-    "styles/css/loader.css"
-    
+    "styles/import.css",
   ];
 
-  
   function loadCSS(href) {
     return new Promise((resolve, reject) => {
       const link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = href;
-      link.onload = resolve;
-      link.onerror = reject;
+      link.onload = () => {
+        console.log(`CSS chargé : ${href}`);
+        resolve();
+      };
+      link.onerror = (error) => {
+        console.error(`Erreur lors du chargement du fichier CSS : ${href}`, error);
+        reject(error);
+      };
       document.head.appendChild(link);
     });
   }
@@ -37,7 +35,10 @@ window.addEventListener("load", () => {
         console.log(`${src} chargé`);
         resolve();
       };
-      script.onerror = () => reject(new Error(`Erreur de chargement: ${src}`));
+      script.onerror = (error) => {
+        console.error(`Erreur de chargement du script : ${src}`, error);
+        reject(new Error(`Erreur de chargement: ${src}`));
+      };
       document.body.appendChild(script);
     });
   }
@@ -51,20 +52,16 @@ window.addEventListener("load", () => {
   .then(() => {
     console.log("✅ Tous les scripts ont été chargés !");
 
-    
     const loader = document.getElementById("loader");
     if (loader) loader.classList.add("hidden");
 
     const content = document.getElementById("content");
     if (content) content.style.display = "block";
 
-    
     if (typeof call === "function") call();
     if (typeof startClock === "function") startClock();
   })
   .catch(err => {
     console.error("Erreur lors du chargement des fichiers :", err);
   });
-
-  
 });

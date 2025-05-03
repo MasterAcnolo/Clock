@@ -1,0 +1,24 @@
+.gadget-theme {
+    --text-color: #273746;
+    --background-color: #0000003d; 
+
+    --background-clock-color: #313131;
+    --aiguilles-secondes-color: blue;
+    --aiguilles-minutes-color: #fffbfb;
+    --aiguilles-heures-color: #bb1d1d;
+    --trait-color: #666;
+    --border-color: white;
+
+    --text-button-color: rgb(0, 0, 0);
+    --button-bg-color: #717274;
+    --button-border-color: rgb(0, 0, 0);
+
+    --dot-color: rgb(255, 255, 255);
+
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: #c4c4c4;
+    --select-bg: rgba(255, 255, 255, 0.2);
+
+    --bg-chichi: url('../images/CharlieChaplin.jpg');
+}
