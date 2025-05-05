@@ -19,7 +19,13 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@447&display=swap');
 
+/* Animations */
+
+@import url("animations/animations.css");
+
 @font-face {
     font-family: Digital;
     src: url("../assets/fonts/digital-7.ttf");
 }
+
+
