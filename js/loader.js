@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
 
   const cssToLoad = [
     "styles/import.css",
+    "../styles/main.css"
   ];
 
   function loadCSS(href) {
