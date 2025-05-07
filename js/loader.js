@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   const scriptsToLoad = [
     "js/clock.js",
     "js/utc.js",
-    "js/mode.js",
+    "js/themeswapper.js",
   ];
 
   const cssToLoad = [
