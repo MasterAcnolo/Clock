@@ -47,7 +47,7 @@ function startClock() {
         startClock();
       });
     } else {
-      console.warn("❌ Select introuvable dans le DOM.");
+      console.warn("❌ Select introuvable dans le DOM."); // C'est plus fort qu'un console.log
     }
   
     startClock();
