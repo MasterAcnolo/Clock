@@ -1,5 +1,3 @@
-/* @import url("styles.css"); Inutile car HTML C'est le Goat*/
-
 .Analogique {
   position: relative;
   width: 300px;
@@ -7,7 +5,7 @@
   background: var(--background-clock-color);
 
   /* background: url("../img/Chirac.jpg"); */
-  background: var(--bg-chichi); 
+  /* background: var(--bg-chichi);   */
   background-size: cover;
   background-position: center;
 
@@ -16,9 +14,6 @@
   border: 5px solid var(--border-color);
 
 }
-
-
-
 
 
 .aiguille {
@@ -74,7 +69,7 @@
   position: absolute;
   width: 2px;
   height: 15px; 
-  background: var(--trait-color); /*  --trait-color: black; */
+  background: var(--trait-color);
   top: 8%;
   left: 50%;
   transform-origin: center 940%;

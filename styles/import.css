@@ -1,0 +1,31 @@
+/* CSS Files */
+
+@import url("main.css");
+@import url("loader/loader.css");
+@import url("variable.css");
+
+/* Clock */
+@import url("clocks/digitalclock.css");
+@import url("clocks/analogclock.css");
+
+@import url("UTC-Menu/UTC.css");
+
+/* Themes */
+
+@import url("buttons/themebutton.css");
+@import url("theme/darktheme.css");
+@import url("theme/gadgettheme.css");
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@447&display=swap');
+
+/* Animations */
+
+@import url("animations/animations.css");
+
+@font-face {
+    font-family: Digital;
+    src: url("../assets/fonts/digital-7.ttf");
+}
+
+

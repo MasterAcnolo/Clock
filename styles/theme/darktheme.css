@@ -20,25 +20,5 @@
     --option-bg: #c4c4c4;
     --select-bg: rgba(255, 255, 255, 0.2);
 
-    --bg-chichi: url('../img/CharlieChaplin.jpg');
-}
-
-#BoutonMode {
-    background-color: var(--button-bg-color);
-    border-color: var(--button-border-color);
-    border-radius: 8px;
-    padding: 10px 20px;
-    color: var(--text-button-color);
-    font-size: 16px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-#BoutonMode:hover{
-    transform: scale(1.1);
-}
-
-
-#textmode {
-    color: var(--text-button-color);
+    --bg-chichi: url('../images/CharlieChaplin.jpg');
 }
