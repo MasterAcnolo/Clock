@@ -1,10 +1,10 @@
-var timezone = "Europe/Paris"; // Défaut
+var timezone = "Europe/Paris"; // Défaut (UTC +1)
 var intervalId;
 
+// Mise à jour de l'horloge
 function updateClockUTC() {
     const date = new Date();
 
-    try {
         const options = { timeZone: timezone, hour12: false };
         const timeString = date.toLocaleString('en-GB', options);
         const parts = timeString.split(/[\s:/]+/);
@@ -17,39 +17,29 @@ function updateClockUTC() {
         const seconds = parseInt(parts[5], 10);
 
         now = new Date(year, month, day, hours, minutes, seconds);
-    } catch (error) {
-        console.error("Erreur de fuseau horaire:", error);
-        now = new Date();
+
+         if (typeof call === "function") {
+                call(); // Appelle la fonction de clock.js si disponible
+            }
+
     }
 
-    if (typeof call === "function") {
-        call(); // Appelle la fonction de clock.js si disponible
-    } else {
-        console.warn("La fonction call() n'est pas encore définie.");
-    }
-}
-
+// Appel Initial
 function startClock() {
     clearInterval(intervalId);
     updateClockUTC();
-    intervalId = setInterval(updateClockUTC, 1000);
+    setInterval(updateClockUTC, 1000);
 }
 
+// Gestion du changement de fuseau horaire.
+const select = document.getElementById("selectFuseau");
 
-(function () {
-    const select = document.getElementById("selectFuseau");
-  
-    if (select) {
-      console.log("✅ Select trouvé (après chargement)");
-      select.addEventListener("change", function () {
-        console.log("🔥 Changement détecté :", this.value);
+if (select) {
+
+    select.addEventListener("change", function () {
         timezone = this.value;
         startClock();
-      });
-    } else {
-      console.warn("❌ Select introuvable dans le DOM."); // C'est plus fort qu'un console.log
-    }
-  
-    startClock();
-  })();
-  
+    });
+}
+
+startClock();
